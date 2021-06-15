@@ -9,7 +9,7 @@ var student = {
       stuAge : 20,
 }
 //con console.log ho il contenuto del object
-console.log(student)
+console.log('Check contenuto oggetto',student)
 
 var outputStudent = document.getElementById('student');
 var htmlPropStud = '';
@@ -33,20 +33,65 @@ Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare
 Ricordatevi, è un array, quindi? for.
 */
 
+var classroom = {
+     students: [
+           {name: 'Al', surname: 'Pacino', age: '23'},
+           {name: 'Bo', surname: 'Derek', age: '21'},
+           {name: 'Ed', surname: 'Wood', age: '22'},
+      ]
+
+}
+console.log('Check contenuto array', classroom.students)
+
+var outputStudent2 = document.getElementById('student2');
+var htmlPropStud2 = '';
 
 
+for (var i = 0; i < classroom.students.length; i++){
+      for (var key in classroom.students[i] )
+      htmlPropStud2 += "<li>" + key + ":" + classroom.students[i][key] + "</li>"
+
+}
+outputStudent2.innerHTML = htmlPropStud2;
 
 
-
-
-
-
-
+      
 
 
 /*PARTE 3
 Dare la possibilità all’utente, attraverso 3 prompt() - uno per ciascuna proprietà -
  di aggiungere UN SOLO oggetto studente inserendo nell’ordine: nome, cognome e età.
 */
+
+var studName = prompt('Inserisci nome studente');
+var studSurn = prompt('Inserisci cognome studente');
+var studAge = prompt('Inserisci età studente');
+
+
+//definire array vuoto è corretto?
+students =[];
+
+
+students.push({
+      name : studName,
+      surname : studSurn,
+      age : studAge
+
+
+})
+
+console.log('Check push proprietà oggetti studenti', students);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
