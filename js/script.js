@@ -8,8 +8,22 @@ var student = {
       stuSurname : 'Benni',
       stuAge : 20,
 }
-
+//con console.log ho il contenuto del object
 console.log(student)
+
+var outputStudent = document.getElementById('student');
+var htmlPropStud = '';
+
+// con for in attraverso l oggetto student e stampo tutte le proprietà
+for (var k in student) {
+      htmlPropStud += "<li>" + k + ":" + student[k] + "</li>";
+      console.log(k, student[k])
+}
+
+outputStudent.innerHTML = htmlPropStud;
+
+
+
 
 
 
@@ -18,6 +32,8 @@ console.log(student)
 Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.  
 Ricordatevi, è un array, quindi? for.
 */
+
+
 
 
 
